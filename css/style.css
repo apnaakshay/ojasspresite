@@ -15,7 +15,27 @@ html, body {
 body {
     margin: 0px !important;
 }
-
+.dots-navigator{
+    position: absolute;
+    top: 40vh;
+    right: 50px;
+}
+.dots-navigator .dot{
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    border: 1px solid rgba(0,0,0,0.5);
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+    position: absolute;
+    display: block;
+    z-index:999;
+    cursor: pointer;
+}
+.dot-selected{
+    background: rgba(0,0,0,0.7) !important;
+}
 .container {
     width: 100%;
     height: 100vh;
@@ -52,7 +72,7 @@ body {
 }
 
 .title p {
-    font-family: "Microsoft YaHei UI Light";
+    font-family: "Montserrat", sans-serif;
     font-size: 45px;
     text-transform: uppercase;
 }
@@ -180,6 +200,13 @@ body {
     background: #eeeeee;
     float: left;
     display: inline-block;
+    overflow: hidden;
+
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
 }
 
 .gallery-wrapper {
@@ -224,9 +251,11 @@ body {
     -o-transform: rotate(-45deg);
     transform: rotate(-45deg);
 }
-.gallery-side-bar-toggler.open .stripe:nth-child(2){
+
+.gallery-side-bar-toggler.open .stripe:nth-child(2) {
     margin-left: 5px;
 }
+
 .gallery-side-bar-toggler.open .stripe:nth-child(3) {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
