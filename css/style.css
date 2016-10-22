@@ -26,7 +26,7 @@ body {
 }
 
 .big-center-title {
-    font-family: Montserrat;
+    font-family: Hurt Mold;
     font-size: 40px;
     margin: 100px;
 }
@@ -90,13 +90,14 @@ body {
 
 .title-wrapper {
     width: 100vw;
-    margin: 15vh 10vw;
+    text-align: center;
     color: white;
+    margin-top: 200px;
 }
 
 .title p {
-    font-family: "Montserrat", sans-serif;
-    font-size: 45px;
+    font-family: "Hurt Mold", sans-serif;
+    font-size: 65px;
     text-transform: uppercase;
 }
 
@@ -316,7 +317,7 @@ body {
     list-style: none;
     padding-left: 0px;
     margin-top: 70px;
-    font-family: Montserrat;
+    font-family: Hurt Mold;
     color: #444444;
     font-size: 15px;
     min-width: 100%;
