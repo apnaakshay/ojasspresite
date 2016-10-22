@@ -15,32 +15,46 @@ html, body {
 body {
     margin: 0px !important;
 }
-.big-center-title{
+
+#particles-js {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.big-center-title {
     font-family: Montserrat;
     font-size: 40px;
     margin: 100px;
 }
-.dots-navigator{
+
+.dots-navigator {
     position: absolute;
     top: 40vh;
     right: 50px;
 }
-.dots-navigator .dot{
+
+.dots-navigator .dot {
     width: 10px;
     height: 10px;
     background: transparent;
-    border: 1px solid rgba(0,0,0,0.5);
-    -webkit-border-radius:50%;
-    -moz-border-radius:50%;
-    border-radius:50%;
+    border: 1px solid rgba(255,255,255, 0.5);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
     position: absolute;
     display: block;
-    z-index:999;
+    z-index: 999;
     cursor: pointer;
 }
-.dot-selected{
-    background: rgba(0,0,0,0.7) !important;
+
+.dot-selected {
+    background: rgba(255,255,255, 0.7) !important;
 }
+
 .container {
     width: 100%;
     height: 100vh;
@@ -57,7 +71,11 @@ body {
 }
 
 .background:first-child {
-    background: #C62828;
+
+    background: #136a8a; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #136a8a, #267871); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #136a8a, #267871); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .background:nth-child(2) {
@@ -129,8 +147,8 @@ body {
 }
 
 #galleryLink, #teamLink {
-    border-top: 1px solid #C62828;
-    border-bottom: 1px solid #C62828;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
     cursor: pointer;
 }
 
@@ -147,7 +165,7 @@ body {
 }
 
 #subscribeLink:hover {
-    color: #C62828;
+    color: #136a8a;
     background: white;
 }
 
@@ -174,25 +192,28 @@ body {
     margin: 200px auto;
     position: relative;
 }
-.modal-body{
+
+.modal-body {
     width: 100%;
     position: relative;
     padding: 20px;
     text-align: center;
 
 }
-.modal-body input{
+
+.modal-body input {
     margin-top: 50px;
     border: none;
-    border-bottom: 1px solid #C62828;
+    border-bottom: 1px solid #136a8a;
     padding: 10px 0px;
     -webkit-appearance: none;
     outline: none;
     color: grey;
     font-size: 17px;
 }
+
 .close-modal {
-    color: #C62828;
+    color: #136a8a;
     margin: 10px;
     position: absolute;
     right: 0;
@@ -231,7 +252,7 @@ body {
     transition: all 0.2s linear;
 }
 
-.gallery-wrapper,.team-wrapper  {
+.gallery-wrapper, .team-wrapper {
     width: 75%;
     position: relative;
     height: 100%;
@@ -240,7 +261,7 @@ body {
     display: inline-block;
 }
 
-.gallery-side-bar-toggler,.team-side-bar-toggler {
+.gallery-side-bar-toggler, .team-side-bar-toggler {
     position: absolute;
     width: 27px;
     height: 35px;
@@ -265,11 +286,12 @@ body {
 .gallery-side-bar-toggler .stripe {
     background: #1565C0;
 }
+
 .team-side-bar-toggler .stripe {
     background: #2E7D32;
 }
 
-.gallery-side-bar-toggler.open .stripe:nth-child(1),.team-side-bar-toggler.open .stripe:nth-child(1) {
+.gallery-side-bar-toggler.open .stripe:nth-child(1), .team-side-bar-toggler.open .stripe:nth-child(1) {
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
@@ -277,18 +299,19 @@ body {
     transform: rotate(-45deg);
 }
 
-.gallery-side-bar-toggler.open .stripe:nth-child(2),.team-side-bar-toggler.open .stripe:nth-child(2) {
+.gallery-side-bar-toggler.open .stripe:nth-child(2), .team-side-bar-toggler.open .stripe:nth-child(2) {
     margin-left: 5px;
 }
 
-.gallery-side-bar-toggler.open .stripe:nth-child(3),.team-side-bar-toggler.open .stripe:nth-child(3) {
+.gallery-side-bar-toggler.open .stripe:nth-child(3), .team-side-bar-toggler.open .stripe:nth-child(3) {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
 }
-.sidebar-links{
+
+.sidebar-links {
     width: 100%;
     list-style: none;
     padding-left: 0px;
@@ -298,7 +321,8 @@ body {
     font-size: 15px;
     min-width: 100%;
 }
-.sidebar-links li{
+
+.sidebar-links li {
     padding: 20px 15px;
     border-top: 1px solid #444444;
     cursor: pointer;
@@ -310,12 +334,15 @@ body {
     min-width: inherit;
 
 }
-.sidebar-links li:last-child{
+
+.sidebar-links li:last-child {
     border-bottom: 1px solid #444444;
 }
-.sidebar-links li:hover{
+
+.sidebar-links li:hover {
     color: #1565C0;
 }
-.gallery-wrapper,.team-wrapper{
+
+.gallery-wrapper, .team-wrapper {
     color: white;
 }
