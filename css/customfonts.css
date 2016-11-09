@@ -10,3 +10,11 @@
   font-family: 'Hurt Mold';
   src: url('../fonts/Hurtmold.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'Rational Integer';
+  src: url('../fonts/Rational Integer.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Angerpoise Lampshade';
+  src: url('../fonts/Angerpoise Lampshade.ttf') format('truetype');
+}
