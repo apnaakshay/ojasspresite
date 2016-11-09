@@ -1,5 +1,47 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
+/*SVG ANIMATION*/
+.svg-wrapper {
+    height: 30px;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    width: 100px;
+
+}
+
+.shape {
+    fill: transparent;
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+    stroke: #ffffff;
+}
+
+.text {
+    color: #fff;
+    font-size: 15px;
+    position: relative;
+    top: -29px;
+}
+
+@keyframes draw {
+    0% {
+        stroke-dasharray: 140 540;
+        stroke-dashoffset: -474;
+        stroke-width: 8px;
+    }
+    100% {
+        stroke-dasharray: 760;
+        stroke-dashoffset: 0;
+        stroke-width: 2px;
+    }
+}
+
+.svg-wrapper:hover .shape {
+    -webkit-animation: 0.5s draw linear forwards;
+    animation: 0.5s draw linear forwards;
+}
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -41,7 +83,7 @@ body {
     width: 10px;
     height: 10px;
     background: transparent;
-    border: 1px solid rgba(255,255,255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5);
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
@@ -52,7 +94,7 @@ body {
 }
 
 .dot-selected {
-    background: rgba(255,255,255, 0.7) !important;
+    background: rgba(255, 255, 255, 0.7) !important;
 }
 
 .container {
@@ -76,9 +118,9 @@ body {
     /*background: -webkit-linear-gradient(to left, #136a8a, #267871); !* Chrome 10-25, Safari 5.1-6 *!*/
     /*background: linear-gradient(to left, #136a8a, #267871); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
     background: radial-gradient(
-      circle at bottom center,
-      #1565C0,
-    #000022
+            circle at bottom center,
+            #1565C0,
+            #000022
     );
 
 }
@@ -95,7 +137,7 @@ body {
 
 .title-wrapper {
     width: 50vw;
-    text-align: center  ;
+    text-align: center;
     color: white;
     margin-top: 15vh;
 }
@@ -106,16 +148,19 @@ body {
     margin: 10px;
     text-transform: uppercase;
 }
-.title p:nth-child(2){
+
+.title p:nth-child(2) {
     font-size: 20px;
     font-family: "Angerpoise Lampshade";
     letter-spacing: 5px;
 }
-.caption p{
+
+.caption p {
     font-family: "Montserrat", sans-serif;
     font-size: 15px;
     text-transform: uppercase;
 }
+
 .title p span {
     font-size: 20px;
 }
@@ -124,7 +169,7 @@ body {
     position: absolute;
     width: 100%;
     color: white;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0, 0, 0, 0.7);
     bottom: 0px;
 }
 
@@ -142,12 +187,15 @@ body {
     width: 50%;
     text-align: right;
 }
-.social-links ul li i{
+
+.social-links ul li i {
     font-size: 20px;
 }
+
 .nav-menu ul {
     width: 100%;
     position: relative;
+    height: 30px;
 }
 
 .nav-menu ul li {
@@ -167,35 +215,36 @@ body {
 }
 
 #galleryLink, #teamLink {
-    border-top: 1px solid transparent;
-    border-bottom: 1px solid transparent;
+    /*border-top: 1px solid transparent;*/
+    /*border-bottom: 1px solid transparent;*/
     cursor: pointer;
 }
 
 #galleryLink:hover, #teamLink:hover {
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
+    /*border-top: 1px solid white;*/
+    /*border-bottom: 1px solid white;*/
 }
 
 #subscribeLink {
-    border: 1px solid white;
-    padding: 10px;
+    /*border: 1px solid white;*/
+    /*padding: 10px;*/
     cursor: pointer;
 }
 
-#subscribeLink:hover {
-    color: rgba(0,0,0,0.7);
-    background: white;
-}
+/*#subscribeLink:hover {*/
+/*color: rgba(0,0,0,0.7);*/
+/*background: white;*/
+/*}*/
 
 .modal-wrapper {
     position: fixed;
-    top: 0;
+    top: -100vh;
     left: 0;
-    display: none;
+    opacity: 0;
+    pointer-events: none;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.7);
+    background: transparent;
     -webkit-transition: all 0.5s linear;
     -moz-transition: all 0.5s linear;
     -ms-transition: all 0.5s linear;
@@ -204,35 +253,34 @@ body {
 }
 
 .modal {
-    width: 55vw;
-    height: 25vw;
-    background: white;
-    border-radius: 3px;
+    width: 300px;
+    height: auto;
+    background: rgba(0,0,0,0.7);
     margin: 200px auto;
     position: relative;
+    color: white;
+    font-size: 15px;
 }
 
 .modal-body {
     width: 100%;
     position: relative;
-    padding: 20px;
-    text-align: center;
+    padding: 50px;
 
 }
 
 .modal-body input {
-    margin-top: 50px;
     border: none;
-    border-bottom: 1px solid #136a8a;
+    border-bottom: 1px solid #ffffff;
     padding: 10px 0px;
     -webkit-appearance: none;
     outline: none;
-    color: grey;
-    font-size: 17px;
+    color: white;
+    background: none;
 }
 
 .close-modal {
-    color: #136a8a;
+    color: #ffffff;
     margin: 10px;
     position: absolute;
     right: 0;

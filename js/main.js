@@ -20,11 +20,19 @@ setTimeout(function () {
 
 $("#subscribeLink").click(function (event) {
     event.stopPropagation();
-    $("#subscribe-modal").show();
+    $("#subscribe-modal").css({
+        "opacity": "1",
+        "pointer-events": "auto",
+        "top":"0"
+    });
 });
 $(".close-modal").click(function (event) {
     event.stopPropagation();
-    $("#subscribe-modal").hide();
+    $("#subscribe-modal").css({
+        "opacity": "0",
+        "pointer-events": "none",
+        "top":"-100vh"
+    });
 });
 $("#galleryLink").click(function (event) {
     event.stopPropagation();
