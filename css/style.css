@@ -103,7 +103,9 @@ body {
     position: relative;
     overflow: hidden;
 }
-
+#particles-js{
+    filter: blur(5px);
+}
 .background {
     width: inherit;
     height: inherit;
@@ -117,11 +119,7 @@ body {
     /*background: #136a8a; !* fallback for old browsers *!*/
     /*background: -webkit-linear-gradient(to left, #136a8a, #267871); !* Chrome 10-25, Safari 5.1-6 *!*/
     /*background: linear-gradient(to left, #136a8a, #267871); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
-    background: radial-gradient(
-            circle at bottom center,
-            #1565C0,
-            #000022
-    );
+    background: radial-gradient(ellipse at bottom, #1565C0 0%, #000022 100%)
 
 }
 
@@ -138,10 +136,18 @@ body {
 .title-wrapper {
     width: 50vw;
     text-align: center;
-    color: white;
+    color: #eeeeee;
     margin-top: 15vh;
+    float: left;
 }
-
+.mascot-wrapper{
+    float: left;
+    width: 40vw;
+}
+.mascot-wrapper img{
+    width: 500px;
+    margin: 100px;
+}
 .title p {
     font-family: "Montserrat", sans-serif;
     font-size: 65px;
@@ -156,8 +162,8 @@ body {
 }
 
 .caption p {
-    font-family: "Montserrat", sans-serif;
-    font-size: 15px;
+    font-family: "Good Times", sans-serif;
+    font-size: 45px;
     text-transform: uppercase;
 }
 
@@ -412,4 +418,10 @@ body {
 
 .gallery-wrapper, .team-wrapper {
     color: white;
+}
+.divider{
+    width: 45%;
+    position: relative;
+    border-bottom: 1px solid white;
+    margin: 20px auto;
 }

@@ -18,3 +18,7 @@
   font-family: 'Angerpoise Lampshade';
   src: url('../fonts/Angerpoise Lampshade.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'Good Times';
+  src: url('../fonts/Good TImes.ttf') format('truetype');
+}
